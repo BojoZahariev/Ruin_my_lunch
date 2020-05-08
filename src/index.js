@@ -66,7 +66,7 @@ class Container extends React.Component {
   getTodayData = async (food) => {
     try {
       const response = await fetch(
-        `https://edamam-edamam-nutrition-analysis.p.rapidapi.com/api/nutrition-data?ingr=${food}`,
+        `https://edamam-edamam-nutrition-analysis.p.rapidapi.com/api/nutrition-data?nutrition-type=logging&ingr=${food}`,
         {
           method: 'GET',
           headers: {
