@@ -16,21 +16,19 @@ const GetInput = (props) => {
 };
 
 const Total = (props) => {
-  return (
+  return props.calories !== '' && props.calories !== 0 ? (
     <div>
-      {props.calories !== '' ? (
-        props.calories > 250 ? (
-          <h3>Wow that's {props.calories} calories</h3>
-        ) : (
-          <h3>Not so bad, only {props.calories} calories</h3>
-        )
-      ) : null}
+      {props.calories > 250 ? (
+        <h3>Wow that's {props.calories} calories</h3>
+      ) : (
+        <h3>Not so bad, only {props.calories} calories</h3>
+      )}
     </div>
-  );
+  ) : null;
 };
 
 const Exercise = (props) => {
-  return (
+  return props.calories !== '' && props.calories !== 0 ? (
     <div>
       <h3>To burn that you have to:</h3>
       <p>{`Run ${Math.round((props.calories / 100) * 10) / 10} miles`}</p>
@@ -39,7 +37,7 @@ const Exercise = (props) => {
       <p>Or</p>
       <p>{`Lift weights for ${Math.round((props.calories / 250) * 10) / 10} hours`}</p>
     </div>
-  );
+  ) : null;
 };
 
 class Container extends React.Component {
@@ -93,7 +91,7 @@ class Container extends React.Component {
         <GetInput input={this.state.inputValue} handleChange={this.handleChange} handleSubmit={this.handleSubmit} />
 
         <Total calories={this.state.calories} />
-        {this.state.calories !== '' ? <Exercise calories={this.state.calories} /> : null}
+        {this.state.calories !== '' || this.state.calories !== '0' ? <Exercise calories={this.state.calories} /> : null}
       </div>
     );
   }
