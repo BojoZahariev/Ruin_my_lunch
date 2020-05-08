@@ -19,7 +19,7 @@ const Total = (props) => {
   return (
     <div>
       {props.calories !== '' ? (
-        props.calories > 300 ? (
+        props.calories > 250 ? (
           <h3>Wow that's {props.calories} calories</h3>
         ) : (
           <h3>Not so bad, only {props.calories} calories</h3>
