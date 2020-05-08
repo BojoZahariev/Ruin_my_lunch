@@ -19,9 +19,9 @@ const Total = (props) => {
   return props.calories !== '' && props.calories !== 0 ? (
     <div>
       {props.calories > 250 ? (
-        <h3>Wow that's {props.calories} calories</h3>
+        <h3>Wow that's {props.calories} calories.</h3>
       ) : (
-        <h3>Not so bad, only {props.calories} calories</h3>
+        <h3>Not too bad, only {props.calories} calories.</h3>
       )}
     </div>
   ) : null;
@@ -31,11 +31,13 @@ const Exercise = (props) => {
   return props.calories !== '' && props.calories !== 0 ? (
     <div>
       <h3>To burn that you have to:</h3>
-      <p>{`Run ${Math.round((props.calories / 100) * 10) / 10} miles`}</p>
+      <p>{`Run ${Math.round((props.calories / 100) * 10) / 10} miles.`}</p>
       <p>Or</p>
-      <p>{`Cycle for ${Math.round((props.calories / 600) * 10) / 10} hours`}</p>
+      <p>{`Cycle for ${Math.round((props.calories / 600) * 10) / 10} hours.`}</p>
       <p>Or</p>
-      <p>{`Lift weights for ${Math.round((props.calories / 250) * 10) / 10} hours`}</p>
+      <p>{`Lift weights for ${Math.round((props.calories / 250) * 10) / 10} hours.`}</p>
+      <p>Or</p>
+      <p>{`Make sex for ${Math.round((props.calories / 150) * 10) / 10} hours.`}</p>
     </div>
   ) : null;
 };
