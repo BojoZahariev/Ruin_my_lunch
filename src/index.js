@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import * as serviceWorker from './serviceWorker';
 
 const GetInput = (props) => {
   return (
@@ -27,13 +26,36 @@ const Total = (props) => {
   ) : null;
 };
 
+const Exercises = (props) => {
+  if (props.value === 1 && props.unit === 'mile') {
+    return <p>{`${props.text} mile.`}</p>;
+  } else if (props.value === 1 && props.unit === 'hour') {
+    return <p>{`${props.text} hour.`}</p>;
+  } else if (props.value !== 1 && props.unit === 'mile') {
+    return <p>{`${props.text} miles.`}</p>;
+  } else if (props.value !== 1 && props.unit === 'hour') {
+    return <p>{`${props.text} hours.`}</p>;
+  }
+};
+
 const Exercise = (props) => {
   return props.calories !== '' && props.calories !== 0 ? (
     <div>
       <h3>To burn that you have to:</h3>
-      <p>{`Run ${Math.round((props.calories / 100) * 10) / 10} miles.`}</p>
+      <Exercises
+        value={Math.round((props.calories / 100) * 10) / 10}
+        unit={'mile'}
+        text={`Run ${Math.round((props.calories / 100) * 10) / 10}`}
+      />
+
       <p>Or</p>
-      <p>{`Cycle for ${Math.round((props.calories / 600) * 10) / 10} hours.`}</p>
+
+      <Exercises
+        value={Math.round((props.calories / 600) * 10) / 10}
+        unit={'hour'}
+        text={`Cycle for ${Math.round((props.calories / 600) * 10) / 10}`}
+      />
+
       <p>Or</p>
       <p>{`Lift weights for ${Math.round((props.calories / 250) * 10) / 10} hours.`}</p>
       <p>Or</p>
