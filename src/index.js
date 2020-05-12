@@ -66,8 +66,11 @@ const Exercise = (props) => {
 
       <p>Or</p>
 
-      <p>Or</p>
-      <p>{`Make sex for ${Math.round((props.calories / 150) * 10) / 10} hours.`}</p>
+      <Exercises
+        value={Math.round((props.calories / 150) * 10) / 10}
+        unit={'hour'}
+        text={`Make sex for ${Math.round((props.calories / 150) * 10) / 10}`}
+      />
     </div>
   ) : null;
 };
