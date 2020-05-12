@@ -95,6 +95,9 @@ class Container extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
+    this.setState({
+      calories: '',
+    });
     this.getTodayData(this.state.inputValue);
   }
 
