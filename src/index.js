@@ -28,19 +28,19 @@ const Total = (props) => {
 
 const Exercises = (props) => {
   if (props.value === 1 && props.unit === 'mile') {
-    return <p>{`${props.text} mile.`}</p>;
+    return <p className='slide'>{`${props.text} mile.`}</p>;
   } else if (props.value === 1 && props.unit === 'hour') {
-    return <p>{`${props.text} hour.`}</p>;
+    return <p className='slide'>{`${props.text} hour.`}</p>;
   } else if (props.value !== 1 && props.unit === 'mile') {
-    return <p>{`${props.text} miles.`}</p>;
+    return <p className='slide'>{`${props.text} miles.`}</p>;
   } else if (props.value !== 1 && props.unit === 'hour') {
-    return <p>{`${props.text} hours.`}</p>;
+    return <p className='slide'>{`${props.text} hours.`}</p>;
   }
 };
 
 const Exercise = (props) => {
   return props.calories !== '' && props.calories !== 0 ? (
-    <div>
+    <div className='smallContainer'>
       <h3>To burn that you have to:</h3>
       <Exercises
         value={Math.round((props.calories / 100) * 10) / 10}
@@ -122,7 +122,7 @@ class Container extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className='main'>
         <GetInput input={this.state.inputValue} handleChange={this.handleChange} handleSubmit={this.handleSubmit} />
 
         <Total calories={this.state.calories} />

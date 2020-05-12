@@ -1,6 +1,41 @@
-body {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   text-align: center;
+}
+
+.main {
+}
+
+input {
+  text-align: left;
+}
+
+.smallContainer {
+  position: relative;
+  width: 300px;
+  margin: auto;
+}
+
+.slide {
+  position: relative;
+  left: -100%;
+
+  -webkit-animation-name: slide;
+  animation-name: slide;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide {
+  from {
+    left: -100%;
+  }
+
+  to {
+    left: 0;
+  }
 }
