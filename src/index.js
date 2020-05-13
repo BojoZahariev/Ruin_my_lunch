@@ -39,38 +39,27 @@ const Exercises = (props) => {
 };
 
 const Exercise = (props) => {
+  let runBurn = Math.round((props.calories / 100) * 10) / 10;
+  let cycleBurn = Math.round((props.calories / 600) * 10) / 10;
+  let weightBurn = Math.round((props.calories / 250) * 10) / 10;
+  let sexBurn = Math.round((props.calories / 150) * 10) / 10;
+
   return props.calories !== '' && props.calories !== 0 ? (
     <div className='smallContainer'>
       <h3>To burn that you have to:</h3>
-      <Exercises
-        value={Math.round((props.calories / 100) * 10) / 10}
-        unit={'mile'}
-        text={`Run ${Math.round((props.calories / 100) * 10) / 10}`}
-      />
+      <Exercises value={runBurn} unit={'mile'} text={`Run ${runBurn}`} />
 
       <p>Or</p>
 
-      <Exercises
-        value={Math.round((props.calories / 600) * 10) / 10}
-        unit={'hour'}
-        text={`Cycle for ${Math.round((props.calories / 600) * 10) / 10}`}
-      />
+      <Exercises value={cycleBurn} unit={'hour'} text={`Cycle for ${cycleBurn}`} />
 
       <p>Or</p>
 
-      <Exercises
-        value={Math.round((props.calories / 250) * 10) / 10}
-        unit={'hour'}
-        text={`Lift weights for ${Math.round((props.calories / 250) * 10) / 10}`}
-      />
+      <Exercises value={weightBurn} unit={'hour'} text={`Lift weights for ${weightBurn}`} />
 
       <p>Or</p>
 
-      <Exercises
-        value={Math.round((props.calories / 150) * 10) / 10}
-        unit={'hour'}
-        text={`Make sex for ${Math.round((props.calories / 150) * 10) / 10}`}
-      />
+      <Exercises value={sexBurn} unit={'hour'} text={`Make sex for ${sexBurn}`} />
     </div>
   ) : null;
 };
