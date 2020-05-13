@@ -64,12 +64,17 @@ const Exercise = (props) => {
   ) : null;
 };
 
+const Loader = () => {
+  return <img className='loader' src={require('./images/burger.png')} alt='burger' />;
+};
+
 class Container extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       inputValue: '',
       calories: '',
+      loading: false,
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -86,6 +91,7 @@ class Container extends React.Component {
     event.preventDefault();
     this.setState({
       calories: '',
+      loading: true,
     });
     this.getTodayData(this.state.inputValue);
   }
@@ -108,6 +114,7 @@ class Container extends React.Component {
 
       this.setState({
         calories: fetchedData.calories,
+        loading: false,
       });
     } catch (err) {}
   };
@@ -116,6 +123,7 @@ class Container extends React.Component {
     return (
       <div className='main'>
         <GetInput input={this.state.inputValue} handleChange={this.handleChange} handleSubmit={this.handleSubmit} />
+        {this.state.loading ? <Loader /> : null}
 
         <Total calories={this.state.calories} />
         {this.state.calories !== '' || this.state.calories !== '0' ? <Exercise calories={this.state.calories} /> : null}
