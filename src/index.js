@@ -4,7 +4,7 @@ import './index.css';
 
 const GetInput = (props) => {
   return (
-    <div>
+    <div className='formDiv'>
       <h3>What did you just eat?</h3>
       <form onSubmit={props.handleSubmit}>
         <input value={props.input} onChange={props.handleChange} />
@@ -123,6 +123,7 @@ class Container extends React.Component {
     return (
       <div className='main'>
         <GetInput input={this.state.inputValue} handleChange={this.handleChange} handleSubmit={this.handleSubmit} />
+
         {this.state.loading ? <Loader /> : null}
 
         <Total calories={this.state.calories} />

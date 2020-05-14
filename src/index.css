@@ -6,6 +6,22 @@
 }
 
 .main {
+  /*
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  */
+  position: relative;
+  height: 100vh;
+}
+
+.formDiv {
+  position: absolute;
+  left: 50%;
+  margin-left: -150px;
+  top: 40%;
+  width: 300px;
 }
 
 input {
