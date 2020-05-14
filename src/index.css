@@ -29,9 +29,11 @@ input {
 }
 
 .smallContainer {
-  position: relative;
+  position: absolute;
+  left: 50%;
+  margin-left: -150px;
+  top: 50%;
   width: 300px;
-  margin: auto;
 }
 
 .slide {
@@ -70,10 +72,11 @@ input {
 .loader {
   width: 200px;
   position: absolute;
-  left: 0;
-  right: 0;
-  top: 10%;
-  margin: auto;
+  left: 50%;
+  margin-left: -100px;
+  top: 50%;
+  margin-top: -100px;
+  width: 200px;
   z-index: 99;
 
   -webkit-animation: spin 3s linear infinite;

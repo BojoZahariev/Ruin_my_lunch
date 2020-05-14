@@ -15,15 +15,7 @@ const GetInput = (props) => {
 };
 
 const Total = (props) => {
-  return props.calories !== '' && props.calories !== 0 ? (
-    <div>
-      {props.calories > 250 ? (
-        <h3>Wow that's {props.calories} calories.</h3>
-      ) : (
-        <h3>Not too bad, only {props.calories} calories.</h3>
-      )}
-    </div>
-  ) : null;
+  return <h3>{props.text}</h3>;
 };
 
 const Exercises = (props) => {
@@ -46,19 +38,19 @@ const Exercise = (props) => {
 
   return props.calories !== '' && props.calories !== 0 ? (
     <div className='smallContainer'>
+      {props.calories > 250 ? (
+        <Total text={`Wow that's ${props.calories} calories.`} />
+      ) : (
+        <Total text={`Not too bad, only ${props.calories} calories.`} />
+      )}
+
       <h3>To burn that you have to:</h3>
       <Exercises value={runBurn} unit={'mile'} text={`Run ${runBurn}`} />
-
       <p>Or</p>
-
       <Exercises value={cycleBurn} unit={'hour'} text={`Cycle for ${cycleBurn}`} />
-
       <p>Or</p>
-
       <Exercises value={weightBurn} unit={'hour'} text={`Lift weights for ${weightBurn}`} />
-
       <p>Or</p>
-
       <Exercises value={sexBurn} unit={'hour'} text={`Make sex for ${sexBurn}`} />
     </div>
   ) : null;
