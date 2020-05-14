@@ -52,6 +52,10 @@ const Exercise = (props) => {
       <Exercises value={weightBurn} unit={'hour'} text={`Lift weights for ${weightBurn}`} />
       <p>Or</p>
       <Exercises value={sexBurn} unit={'hour'} text={`Make sex for ${sexBurn}`} />
+
+      <button className='btn' onClick={props.onClick}>
+        NEW
+      </button>
     </div>
   ) : null;
 };
@@ -67,6 +71,7 @@ class Container extends React.Component {
       inputValue: '',
       calories: '',
       loading: false,
+      loaded: false,
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -107,6 +112,7 @@ class Container extends React.Component {
       this.setState({
         calories: fetchedData.calories,
         loading: false,
+        loaded: true,
       });
     } catch (err) {}
   };
@@ -114,12 +120,19 @@ class Container extends React.Component {
   render() {
     return (
       <div className='main'>
-        <GetInput input={this.state.inputValue} handleChange={this.handleChange} handleSubmit={this.handleSubmit} />
+        {!this.state.loaded ? (
+          <GetInput input={this.state.inputValue} handleChange={this.handleChange} handleSubmit={this.handleSubmit} />
+        ) : null}
 
         {this.state.loading ? <Loader /> : null}
 
         <Total calories={this.state.calories} />
-        {this.state.calories !== '' || this.state.calories !== '0' ? <Exercise calories={this.state.calories} /> : null}
+        {this.state.calories !== '' || this.state.calories !== '0' ? (
+          <Exercise
+            calories={this.state.calories}
+            onClick={() => this.setState({ inputValue: '', calories: '', loading: false, loaded: false })}
+          />
+        ) : null}
       </div>
     );
   }
