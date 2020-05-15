@@ -124,7 +124,7 @@ class Container extends React.Component {
           <GetInput input={this.state.inputValue} handleChange={this.handleChange} handleSubmit={this.handleSubmit} />
         ) : null}
 
-        {this.state.loading ? <Loader /> : null}
+        {this.state.loading && this.state.inputValue !== '' ? <Loader /> : null}
 
         {this.state.calories !== '' && this.state.calories !== 0 ? (
           <Exercise
