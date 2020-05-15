@@ -64,6 +64,17 @@ const Loader = () => {
   return <img className='loader' src={require('./images/burger.png')} alt='burger' />;
 };
 
+const Fail = (props) => {
+  return (
+    <div>
+      <p>{props.text}</p>
+      <button className='btn' onClick={props.onClick}>
+        NEW
+      </button>
+    </div>
+  );
+};
+
 class Container extends React.Component {
   constructor(props) {
     super(props);
@@ -86,11 +97,13 @@ class Container extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    this.setState({
-      calories: '',
-      loading: true,
-    });
-    this.getTodayData(this.state.inputValue);
+    if (this.state.inputValue !== '') {
+      this.setState({
+        calories: '',
+        loading: true,
+      });
+      this.getTodayData(this.state.inputValue);
+    }
   }
 
   getTodayData = async (food) => {
@@ -129,6 +142,13 @@ class Container extends React.Component {
         {this.state.calories !== '' && this.state.calories !== 0 ? (
           <Exercise
             calories={this.state.calories}
+            onClick={() => this.setState({ inputValue: '', calories: '', loading: false, loaded: false })}
+          />
+        ) : null}
+
+        {this.state.calories === 0 ? (
+          <Fail
+            text={'ups'}
             onClick={() => this.setState({ inputValue: '', calories: '', loading: false, loaded: false })}
           />
         ) : null}
