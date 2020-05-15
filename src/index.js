@@ -53,9 +53,7 @@ const Exercise = (props) => {
       <p>Or</p>
       <Exercises value={sexBurn} unit={'hour'} text={`Make sex for ${sexBurn}`} />
 
-      <button className='btn' onClick={props.onClick}>
-        NEW
-      </button>
+      <Btn className='btn' onClick={props.onClick} text={'NEW'} />
     </div>
   ) : null;
 };
@@ -68,10 +66,16 @@ const Fail = (props) => {
   return (
     <div>
       <p>{props.text}</p>
-      <button className='btn' onClick={props.onClick}>
-        NEW
-      </button>
+      <Btn className='btn' onClick={props.onClick} text={'Try again'} />
     </div>
+  );
+};
+
+const Btn = (props) => {
+  return (
+    <button className='btn' onClick={props.onClick}>
+      {props.text}
+    </button>
   );
 };
 
