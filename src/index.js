@@ -53,7 +53,7 @@ const Exercise = (props) => {
       <p>Or</p>
       <Exercises value={sexBurn} unit={'hour'} text={`Make sex for ${sexBurn}`} />
 
-      <Btn className='btn' onClick={props.onClick} text={'NEW'} />
+      <Btn className='btn' onClick={props.onClick} text={'Wait I ate more stuff'} />
     </div>
   ) : null;
 };
@@ -152,7 +152,7 @@ class Container extends React.Component {
 
         {this.state.calories === 0 ? (
           <Fail
-            text={'ups'}
+            text={'Something went wrong'}
             onClick={() => this.setState({ inputValue: '', calories: '', loading: false, loaded: false })}
           />
         ) : null}
