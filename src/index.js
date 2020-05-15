@@ -126,8 +126,7 @@ class Container extends React.Component {
 
         {this.state.loading ? <Loader /> : null}
 
-        <Total calories={this.state.calories} />
-        {this.state.calories !== '' || this.state.calories !== '0' ? (
+        {this.state.calories !== '' && this.state.calories !== 0 ? (
           <Exercise
             calories={this.state.calories}
             onClick={() => this.setState({ inputValue: '', calories: '', loading: false, loaded: false })}
