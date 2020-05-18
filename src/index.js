@@ -5,10 +5,11 @@ import './index.css';
 const GetInput = (props) => {
   return (
     <div className='formDiv'>
-      <h3>What did you just eat?</h3>
+      <h3>What did you eat?</h3>
       <form onSubmit={props.handleSubmit}>
         <input value={props.input} onChange={props.handleChange} />
-        <button type='submit'>Submit</button>
+        <button type='submit'>Ruin it</button>
+        <p>E.g: 1 apple, chicken, rice and chicken</p>
       </form>
     </div>
   );
@@ -32,7 +33,7 @@ const Exercises = (props) => {
 
 const Exercise = (props) => {
   let runBurn = Math.round((props.calories / 100) * 10) / 10;
-  let cycleBurn = Math.round((props.calories / 600) * 10) / 10;
+  let cycleBurn = (Math.round((props.calories / 600) * 10) / 10) * 60;
   let weightBurn = Math.round((props.calories / 250) * 10) / 10;
   let sexBurn = Math.round((props.calories / 150) * 10) / 10;
 
