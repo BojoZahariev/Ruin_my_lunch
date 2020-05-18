@@ -8,7 +8,9 @@ const GetInput = (props) => {
       <h3>What did you eat?</h3>
       <form onSubmit={props.handleSubmit}>
         <input value={props.input} onChange={props.handleChange} />
-        <button type='submit'>Ruin it</button>
+        <button className='btn' type='submit'>
+          Ruin it !
+        </button>
         <p>E.g: 1 apple, chicken, rice and chicken</p>
       </form>
     </div>
