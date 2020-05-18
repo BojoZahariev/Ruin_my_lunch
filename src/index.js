@@ -5,7 +5,7 @@ import './index.css';
 const GetInput = (props) => {
   return (
     <div className='formDiv'>
-      <h3>What did you eat?</h3>
+      <h3 className='smallTitle'>What did you eat?</h3>
       <form onSubmit={props.handleSubmit}>
         <input value={props.input} onChange={props.handleChange} />
         <button className='btn' type='submit'>
