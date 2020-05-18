@@ -42,7 +42,7 @@ const Exercise = (props) => {
   let runBurn = Math.round((props.calories / 100) * 10) / 10;
   let cycleBurn = timeConverter((Math.round((props.calories / 600) * 10) / 10) * 60);
   let weightBurn = timeConverter((Math.round((props.calories / 250) * 10) / 10) * 60);
-  let sexBurn = timeConverter(Math.round((props.calories / 150) * 10) / 10);
+  let sexBurn = timeConverter((Math.round((props.calories / 150) * 10) / 10) * 60);
 
   return props.calories !== '' && props.calories !== 0 ? (
     <div className='smallContainer'>
