@@ -20,22 +20,29 @@ const Total = (props) => {
 };
 
 const Exercises = (props) => {
-  if (props.value === 1 && props.unit === 'mile') {
-    return <p className='slide'>{`${props.text} mile.`}</p>;
-  } else if (props.value === 1 && props.unit === 'hour') {
-    return <p className='slide'>{`${props.text} hour.`}</p>;
-  } else if (props.value !== 1 && props.unit === 'mile') {
-    return <p className='slide'>{`${props.text} miles.`}</p>;
-  } else if (props.value !== 1 && props.unit === 'hour') {
-    return <p className='slide'>{`${props.text} hours.`}</p>;
-  }
+  return <p className='slide'>{props.text}</p>;
 };
 
 const Exercise = (props) => {
+  const timeConverter = (n) => {
+    console.log(n);
+    var num = n;
+    var hours = num / 60;
+    var rHours = Math.floor(hours);
+    var minutes = (hours - rHours) * 60;
+    var rMinutes = Math.round(minutes);
+
+    if (rHours > 0) {
+      return `${rHours} ${rHours > 1 ? 'hours' : 'hour'} and ${rMinutes} ${rMinutes > 1 ? 'minutes' : 'minute'}.`;
+    } else {
+      return `${rMinutes} ${rMinutes > 1 ? 'minutes' : 'minute'}.`;
+    }
+  };
+
   let runBurn = Math.round((props.calories / 100) * 10) / 10;
-  let cycleBurn = (Math.round((props.calories / 600) * 10) / 10) * 60;
-  let weightBurn = Math.round((props.calories / 250) * 10) / 10;
-  let sexBurn = Math.round((props.calories / 150) * 10) / 10;
+  let cycleBurn = timeConverter((Math.round((props.calories / 600) * 10) / 10) * 60);
+  let weightBurn = timeConverter((Math.round((props.calories / 250) * 10) / 10) * 60);
+  let sexBurn = timeConverter(Math.round((props.calories / 150) * 10) / 10);
 
   return props.calories !== '' && props.calories !== 0 ? (
     <div className='smallContainer'>
@@ -46,13 +53,13 @@ const Exercise = (props) => {
       )}
 
       <h3>To burn that you have to:</h3>
-      <Exercises value={runBurn} unit={'mile'} text={`Run ${runBurn}`} />
+      <Exercises text={`Run ${runBurn} ${runBurn === 1 ? 'mile' : 'miles'}`} />
       <p>Or</p>
-      <Exercises value={cycleBurn} unit={'hour'} text={`Cycle for ${cycleBurn}`} />
+      <Exercises text={`Cycle for ${cycleBurn}`} />
       <p>Or</p>
-      <Exercises value={weightBurn} unit={'hour'} text={`Lift weights for ${weightBurn}`} />
+      <Exercises text={`Lift weights for ${weightBurn}`} />
       <p>Or</p>
-      <Exercises value={sexBurn} unit={'hour'} text={`Make sex for ${sexBurn}`} />
+      <Exercises text={`Make sex for ${sexBurn}`} />
 
       <Btn className='btn' onClick={props.onClick} text={'Wait I ate more stuff'} />
     </div>
