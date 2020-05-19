@@ -154,6 +154,7 @@ input {
 
 .logoText {
   position: absolute;
+  font-weight: 700;
   top: 45px;
   left: 0;
   right: 0;

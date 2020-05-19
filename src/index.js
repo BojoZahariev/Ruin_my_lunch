@@ -27,7 +27,6 @@ const Exercises = (props) => {
 
 const Exercise = (props) => {
   const timeConverter = (n) => {
-    console.log(n);
     var num = n;
     var hours = num / 60;
     var rHours = Math.floor(hours);
@@ -148,6 +147,7 @@ class Container extends React.Component {
       const fetchedData = await response.json();
 
       console.log(fetchedData);
+      console.log(fetchedData.calories);
 
       this.setState({
         calories: fetchedData.calories,
@@ -166,14 +166,14 @@ class Container extends React.Component {
 
         {this.state.loading && this.state.inputValue !== '' ? <Loader /> : null}
 
-        {this.state.calories !== '' && this.state.calories !== 0 ? (
+        {this.state.calories !== '' && this.state.calories !== 0 && this.state.calories !== undefined ? (
           <Exercise
             calories={this.state.calories}
             onClick={() => this.setState({ inputValue: '', calories: '', loading: false, loaded: false })}
           />
         ) : null}
 
-        {this.state.calories === 0 ? (
+        {this.state.calories === 0 || this.state.calories === undefined ? (
           <Fail
             text={'Something went wrong'}
             onClick={() => this.setState({ inputValue: '', calories: '', loading: false, loaded: false })}
