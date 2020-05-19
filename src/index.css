@@ -150,11 +150,12 @@ input {
 
 .logoPic {
   width: 100%;
+  opacity: 0.6;
 }
 
 .logoText {
   position: absolute;
-  font-weight: 700;
+  font-family: 'Lobster', cursive;
   top: 45px;
   left: 0;
   right: 0;
