@@ -12,6 +12,7 @@
   align-items: center;
   background-color: #bfd7ea;
   color: #294c60;
+  font-family: 'Nunito', sans-serif;
 }
 
 .smallTitle {
@@ -35,6 +36,7 @@ input {
   height: 40px;
   font-size: 18px;
   margin: 5px;
+  font-family: 'Nunito', sans-serif;
 }
 
 .btn {
@@ -48,9 +50,10 @@ input {
   color: #222;
   cursor: pointer;
   user-select: none;
-  -webkit-box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.75);
-  box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 1px 1px 4px 2px #000000bf;
+  -moz-box-shadow: 1px 1px 4px 2px #000000bf;
+  box-shadow: 1px 1px 4px 2px #000000bf;
+  font-family: 'Nunito', sans-serif;
 }
 
 .btn:hover {
@@ -62,9 +65,9 @@ input {
   -ms-transform: translateY(1px);
   -webkit-transform: translateY(1px);
   transform: translateY(1px);
-  -webkit-box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 1px 1px 4px 0px #000000bf;
+  -moz-box-shadow: 1px 1px 4px 0px #000000bf;
+  box-shadow: 1px 1px 4px 0px #000000bf;
 }
 
 .smallContainer {
@@ -135,4 +138,24 @@ input {
   100% {
     transform: rotate(360deg);
   }
+}
+
+.logo {
+  position: absolute;
+  width: 200px;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+}
+
+.logoPic {
+  width: 100%;
+}
+
+.logoText {
+  position: absolute;
+  top: 45px;
+  left: 0;
+  right: 0;
+  margin: auto;
 }

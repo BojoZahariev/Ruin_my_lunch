@@ -72,6 +72,19 @@ const Loader = () => {
   return <img className='loader' src={require('./images/burger.png')} alt='burger' />;
 };
 
+const Logo = () => {
+  return (
+    <div className='logo'>
+      <p className='logoText'>
+        Ruin
+        <br /> My <br />
+        Lunch
+      </p>
+      <img className='logoPic' src={require('./images/plate.png')} alt='logo' />
+    </div>
+  );
+};
+
 const Fail = (props) => {
   return (
     <div>
@@ -166,6 +179,8 @@ class Container extends React.Component {
             onClick={() => this.setState({ inputValue: '', calories: '', loading: false, loaded: false })}
           />
         ) : null}
+
+        <Logo />
       </div>
     );
   }
