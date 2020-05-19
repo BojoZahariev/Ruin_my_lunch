@@ -160,7 +160,7 @@ class Container extends React.Component {
   render() {
     return (
       <div className='main'>
-        {!this.state.loaded ? (
+        {!this.state.loaded && !this.state.loading ? (
           <GetInput input={this.state.inputValue} handleChange={this.handleChange} handleSubmit={this.handleSubmit} />
         ) : null}
 
