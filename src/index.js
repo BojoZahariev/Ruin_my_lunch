@@ -5,7 +5,7 @@ import './index.css';
 const GetInput = (props) => {
   return (
     <div className='formDiv'>
-      <h3 className='smallTitle'>What did you eat?</h3>
+      <h3 className='title'>What did you eat?</h3>
       <form onSubmit={props.handleSubmit}>
         <input value={props.input} onChange={props.handleChange} />
         <button className='btn' type='submit'>
@@ -18,7 +18,7 @@ const GetInput = (props) => {
 };
 
 const Total = (props) => {
-  return <h3>{props.text}</h3>;
+  return <h3 className='title'>{props.text}</h3>;
 };
 
 const Exercises = (props) => {
@@ -55,13 +55,13 @@ const Exercise = (props) => {
         <Total text={`Not too bad, only ${props.calories} calories.`} />
       )}
 
-      <h3>To burn that you have to:</h3>
+      <h3 className='smallTitle'>To burn that you can:</h3>
       <Exercises text={`Run ${runBurn} ${runBurn === 1 ? 'mile' : 'miles'}`} />
-      <p>Or</p>
+      <p className='or'>Or</p>
       <Exercises text={`Cycle for ${cycleBurn}`} />
-      <p>Or</p>
+      <p className='or'>Or</p>
       <Exercises text={`Lift weights for ${weightBurn}`} />
-      <p>Or</p>
+      <p className='or'>Or</p>
       <Exercises text={`Make sex for ${sexBurn}`} />
 
       <Btn className='btn' onClick={props.onClick} text={'Wait I ate more stuff'} />
@@ -89,8 +89,8 @@ const Logo = () => {
 const Fail = (props) => {
   return (
     <div>
-      <p>{props.text}</p>
-      <p>E.g: "1 apple" or "chicken" or "rice and chicken".</p>
+      <h3>{props.text}</h3>
+      <p className='smallText'>E.g: "1 apple" or "chicken" or "rice and chicken".</p>
       <Btn className='btn' onClick={props.onClick} text={'Try again'} />
     </div>
   );
