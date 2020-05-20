@@ -23,7 +23,10 @@
 
 .smallTitle {
   font-size: 23px;
-  padding: 20px;
+  padding: 10px 10px 0px;
+  border-bottom: 1px solid #222;
+  width: 300px;
+  margin: auto;
 }
 
 .or {
@@ -179,4 +182,15 @@ input {
   margin: auto;
   opacity: 0.5;
   color: #000;
+}
+
+@media only screen and (max-width: 768px) {
+  .logo {
+    width: 120px;
+  }
+
+  .logoText {
+    top: 25px;
+    font-size: 12px;
+  }
 }
