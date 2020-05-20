@@ -13,6 +13,7 @@
   background-color: #bfd7ea;
   color: #294c60;
   font-family: 'Nunito', sans-serif;
+  letter-spacing: 0.5px;
 }
 
 .smallTitle {
@@ -159,4 +160,5 @@ input {
   left: 0;
   right: 0;
   margin: auto;
+  opacity: 0.8;
 }

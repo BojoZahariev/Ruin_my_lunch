@@ -11,7 +11,7 @@ const GetInput = (props) => {
         <button className='btn' type='submit'>
           Ruin it !
         </button>
-        <p>E.g: 1 apple, chicken, rice and chicken</p>
+        <p>E.g: "1 apple" or "chicken" or "rice and chicken".</p>
       </form>
     </div>
   );
@@ -147,7 +147,6 @@ class Container extends React.Component {
       const fetchedData = await response.json();
 
       console.log(fetchedData);
-      console.log(fetchedData.calories);
 
       this.setState({
         calories: fetchedData.calories,
