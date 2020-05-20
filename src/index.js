@@ -56,14 +56,15 @@ const Exercise = (props) => {
       )}
 
       <h3 className='smallTitle'>To burn that you can:</h3>
-      <Exercises text={`Run ${runBurn} ${runBurn === 1 ? 'mile' : 'miles'}`} />
-      <p className='or'>Or</p>
-      <Exercises text={`Cycle for ${cycleBurn}`} />
-      <p className='or'>Or</p>
-      <Exercises text={`Lift weights for ${weightBurn}`} />
-      <p className='or'>Or</p>
-      <Exercises text={`Make sex for ${sexBurn}`} />
-
+      <div className='exContainer'>
+        <Exercises text={`Run ${runBurn} ${runBurn === 1 ? 'mile' : 'miles'}.`} />
+        <p className='or'>Or</p>
+        <Exercises text={`Cycle for ${cycleBurn}`} />
+        <p className='or'>Or</p>
+        <Exercises text={`Lift weights for ${weightBurn}`} />
+        <p className='or'>Or</p>
+        <Exercises text={`Make sex for ${sexBurn}`} />
+      </div>
       <Btn className='btn' onClick={props.onClick} text={'Wait I ate more stuff'} />
     </div>
   ) : null;

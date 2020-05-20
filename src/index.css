@@ -84,10 +84,14 @@ input {
   position: relative;
 }
 
+.exContainer {
+  padding: 20px;
+}
 .slide {
   position: relative;
   left: -100%;
-
+  color: #b80c09;
+  font-size: 20px;
   -webkit-animation-name: slide;
   animation-name: slide;
   -webkit-animation-duration: 0.5s;
