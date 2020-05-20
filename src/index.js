@@ -90,6 +90,7 @@ const Fail = (props) => {
   return (
     <div>
       <p>{props.text}</p>
+      <p>E.g: "1 apple" or "chicken" or "rice and chicken".</p>
       <Btn className='btn' onClick={props.onClick} text={'Try again'} />
     </div>
   );
@@ -176,7 +177,7 @@ class Container extends React.Component {
 
         {this.state.calories === 0 || this.state.calories === undefined ? (
           <Fail
-            text={'Something went wrong'}
+            text={'Something went wrong.'}
             onClick={() => this.setState({ inputValue: '', calories: '', loading: false, loaded: false })}
           />
         ) : null}
