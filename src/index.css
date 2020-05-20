@@ -72,7 +72,7 @@ input {
 
 .smallContainer {
   position: relative;
-  width: 300px;
+  width: 400px;
 }
 
 .slide {
@@ -150,7 +150,7 @@ input {
 
 .logoPic {
   width: 100%;
-  opacity: 0.6;
+  opacity: 0.5;
 }
 
 .logoText {
@@ -160,5 +160,6 @@ input {
   left: 0;
   right: 0;
   margin: auto;
-  opacity: 0.8;
+  opacity: 0.5;
+  color: #000;
 }

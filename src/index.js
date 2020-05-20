@@ -33,8 +33,10 @@ const Exercise = (props) => {
     var minutes = (hours - rHours) * 60;
     var rMinutes = Math.round(minutes);
 
-    if (rHours > 0) {
+    if (rHours > 0 && rMinutes > 0) {
       return `${rHours} ${rHours > 1 ? 'hours' : 'hour'} and ${rMinutes} ${rMinutes > 1 ? 'minutes' : 'minute'}.`;
+    } else if (rHours > 0 && rMinutes === 0) {
+      return `${rHours} ${rHours > 1 ? 'hours' : 'hour'}.`;
     } else {
       return `${rMinutes} ${rMinutes > 1 ? 'minutes' : 'minute'}.`;
     }
