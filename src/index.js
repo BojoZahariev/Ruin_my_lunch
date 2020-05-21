@@ -11,14 +11,14 @@ const GetInput = (props) => {
         <button className='btn' type='submit'>
           Ruin it !
         </button>
-        <p>E.g: "1 apple" or "chicken" or "rice and chicken".</p>
+        <p className='trans'>E.g: "1 apple" or "chicken" or "rice and chicken".</p>
       </form>
     </div>
   );
 };
 
 const Total = (props) => {
-  return <h3 className='title'>{props.text}</h3>;
+  return <h3 className='title colTitle'>{props.text}</h3>;
 };
 
 const Exercises = (props) => {
