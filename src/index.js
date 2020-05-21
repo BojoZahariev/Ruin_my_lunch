@@ -26,6 +26,7 @@ const Exercises = (props) => {
     <div className='slide'>
       <img className='emoji' src={props.img} alt='emoji' />
       <p>{props.text}</p>
+      <img className='emojiRight' src={props.img} alt='emoji' />
     </div>
   );
 };

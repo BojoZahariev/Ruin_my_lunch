@@ -126,7 +126,15 @@ input {
 }
 
 .emoji {
-  width: 50px;
+  height: 40px;
+  margin: 10px;
+  transform: scaleX(-1);
+}
+
+.emojiRight {
+  height: 40px;
+
+  margin: 10px;
 }
 
 .smallText {
