@@ -208,3 +208,9 @@ input {
     font-size: 12px;
   }
 }
+
+@media only screen and (max-height: 730px) and (max-width: 768px) {
+  .logo {
+    display: none;
+  }
+}
