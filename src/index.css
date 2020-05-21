@@ -13,7 +13,6 @@
   background-color: #bfd7ea;
   color: #294c60;
   font-family: 'Nunito', sans-serif;
-  letter-spacing: 0.5px;
 }
 
 .title {
@@ -24,7 +23,7 @@
 .smallTitle {
   font-size: 23px;
   padding: 10px 10px 0px;
-  border-bottom: 1px solid #222;
+  border-bottom: 1px solid #001b2e;
   width: 300px;
   margin: auto;
 }
