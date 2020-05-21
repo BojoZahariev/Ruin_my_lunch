@@ -77,7 +77,7 @@ const Exercise = (props) => {
 };
 
 const Loader = () => {
-  return <img className='loader' src={require('./images/burger.png')} alt='burger' />;
+  return <img className='loader' src={require('./images/leg.png')} alt='burger' />;
 };
 
 const Logo = () => {
