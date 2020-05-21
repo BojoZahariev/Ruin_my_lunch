@@ -55,7 +55,7 @@ const Exercise = (props) => {
         <Total text={`Not too bad, only ${props.calories} calories.`} />
       )}
 
-      <h3 className='smallTitle'>To burn that you can:</h3>
+      <h3 className='smallTitle'>To burn that you have to:</h3>
       <div className='exContainer'>
         <Exercises text={`Run ${runBurn} ${runBurn === 1 ? 'mile' : 'miles'}.`} />
         <p className='or'>Or</p>
