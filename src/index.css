@@ -90,6 +90,9 @@ input {
   padding: 20px;
 }
 .slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
   left: -100%;
   color: #b80c09;
@@ -120,6 +123,10 @@ input {
   to {
     left: 0;
   }
+}
+
+.emoji {
+  width: 50px;
 }
 
 .smallText {

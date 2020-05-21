@@ -22,7 +22,12 @@ const Total = (props) => {
 };
 
 const Exercises = (props) => {
-  return <p className='slide'>{props.text}</p>;
+  return (
+    <div className='slide'>
+      <img className='emoji' src={props.img} alt='emoji' />
+      <p>{props.text}</p>
+    </div>
+  );
 };
 
 const Exercise = (props) => {
@@ -57,15 +62,15 @@ const Exercise = (props) => {
 
       <h3 className='smallTitle'>To burn that you have to:</h3>
       <div className='exContainer'>
-        <Exercises text={`Run ${runBurn} ${runBurn === 1 ? 'mile' : 'miles'}.`} />
+        <Exercises text={`Run ${runBurn} ${runBurn === 1 ? 'mile' : 'miles'}.`} img={require('./images/run.png')} />
         <p className='or'>Or</p>
-        <Exercises text={`Cycle for ${cycleBurn}`} />
+        <Exercises text={`Cycle for ${cycleBurn}`} img={require('./images/cycle.png')} />
         <p className='or'>Or</p>
-        <Exercises text={`Lift weights for ${weightBurn}`} />
+        <Exercises text={`Lift weights for ${weightBurn}`} img={require('./images/weights.png')} />
         <p className='or'>Or</p>
-        <Exercises text={`Make sex for ${sexBurn}`} />
+        <Exercises text={`Make sex for ${sexBurn}`} img={require('./images/18.png')} />
       </div>
-      <Btn className='btn' onClick={props.onClick} text={'Wait I ate more stuff'} />
+      <Btn className='btn' onClick={props.onClick} text={'Wait, I ate more stuff'} />
     </div>
   ) : null;
 };
