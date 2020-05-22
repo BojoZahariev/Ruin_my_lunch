@@ -97,7 +97,7 @@ const Fail = (props) => {
   return (
     <div>
       <h3>{props.text}</h3>
-      <p className='smallText'>E.g: "1 apple" or "chicken" or "rice and chicken".</p>
+      <p className='smallText'>E.g:'1 apple' or 'chicken' or 'rice and chicken'.</p>
       <Btn className='btn' onClick={props.onClick} text={'Try again'} />
     </div>
   );
@@ -155,8 +155,6 @@ class Container extends React.Component {
         }
       );
       const fetchedData = await response.json();
-
-      console.log(fetchedData);
 
       this.setState({
         calories: fetchedData.calories,
