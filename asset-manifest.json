@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/Ruin_My_Lunch/static/css/main.5a108803.chunk.css",
+    "main.js": "/Ruin_My_Lunch/static/js/main.695828f0.chunk.js",
+    "main.js.map": "/Ruin_My_Lunch/static/js/main.695828f0.chunk.js.map",
+    "runtime-main.js": "/Ruin_My_Lunch/static/js/runtime-main.108f5f7f.js",
+    "runtime-main.js.map": "/Ruin_My_Lunch/static/js/runtime-main.108f5f7f.js.map",
+    "static/js/2.3e4b8e55.chunk.js": "/Ruin_My_Lunch/static/js/2.3e4b8e55.chunk.js",
+    "static/js/2.3e4b8e55.chunk.js.map": "/Ruin_My_Lunch/static/js/2.3e4b8e55.chunk.js.map",
+    "index.html": "/Ruin_My_Lunch/index.html",
+    "precache-manifest.c1696077bbca3252814e227011e2c5bc.js": "/Ruin_My_Lunch/precache-manifest.c1696077bbca3252814e227011e2c5bc.js",
+    "service-worker.js": "/Ruin_My_Lunch/service-worker.js",
+    "static/css/main.5a108803.chunk.css.map": "/Ruin_My_Lunch/static/css/main.5a108803.chunk.css.map",
+    "static/js/2.3e4b8e55.chunk.js.LICENSE.txt": "/Ruin_My_Lunch/static/js/2.3e4b8e55.chunk.js.LICENSE.txt",
+    "static/media/leg.png": "/Ruin_My_Lunch/static/media/leg.79935d51.png",
+    "static/media/plate.png": "/Ruin_My_Lunch/static/media/plate.723b6afa.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.108f5f7f.js",
+    "static/js/2.3e4b8e55.chunk.js",
+    "static/css/main.5a108803.chunk.css",
+    "static/js/main.695828f0.chunk.js"
+  ]
+}
