@@ -11,7 +11,7 @@ const GetInput = (props) => {
         <button className='btn' type='submit'>
           Ruin it !
         </button>
-        <p className='trans'>E.g: "1 apple" or "chicken" or "rice and chicken".</p>
+        <p className='trans'>E.g: '1 apple' or 'chicken' or 'rice and chicken'.</p>
       </form>
     </div>
   );
