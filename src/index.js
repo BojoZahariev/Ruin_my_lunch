@@ -93,6 +93,7 @@ const Logo = () => {
   );
 };
 
+//Message in case of no reply or wrong string
 const Fail = (props) => {
   return (
     <div>
