@@ -207,6 +207,7 @@ input {
   color: #000;
 }
 
+/*MEDIA*/
 @media only screen and (max-width: 768px) {
   .logo {
     width: 120px;
@@ -215,6 +216,24 @@ input {
   .logoText {
     top: 25px;
     font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 330px) {
+  .title {
+    font-size: 20px;
+  }
+
+  .smallTitle {
+    font-size: 20px;
+  }
+
+  .slide {
+    font-size: 16px;
+  }
+
+  .or {
+    padding: 0;
   }
 }
 
