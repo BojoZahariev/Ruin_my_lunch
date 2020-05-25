@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "96b7d611b38771658f43aab69801be67",
+    "revision": "2ce0794f404578d800e3c4ce42c478b7",
     "url": "/Ruin_My_Lunch/index.html"
   },
   {
-    "revision": "3440a678ee4d3fbb1f38",
-    "url": "/Ruin_My_Lunch/static/css/main.5a108803.chunk.css"
+    "revision": "b0a14c0f3121ee8512a2",
+    "url": "/Ruin_My_Lunch/static/css/main.2da18d8e.chunk.css"
   },
   {
     "revision": "c4ca7a55d2b819e7909e",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Ruin_My_Lunch/static/js/2.3e4b8e55.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "3440a678ee4d3fbb1f38",
+    "revision": "b0a14c0f3121ee8512a2",
     "url": "/Ruin_My_Lunch/static/js/main.695828f0.chunk.js"
   },
   {
